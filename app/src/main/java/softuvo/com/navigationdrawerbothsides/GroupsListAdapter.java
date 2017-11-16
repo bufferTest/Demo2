@@ -1,0 +1,63 @@
+package softuvo.com.navigationdrawerbothsides;
+
+import android.content.Context;
+import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.bumptech.glide.Glide;
+
+import java.util.List;
+
+public class GroupsListAdapter extends RecyclerView.Adapter<GroupsListAdapter.MyViewHolder> {
+    Context context;
+    List<ListData.UpdateModel> drawerItemList;
+    int layoutResID;
+
+    public GroupsListAdapter(Context context, int layoutResourceID,
+                             List<ListData.UpdateModel> listItems) {
+        this.context = context;
+        this.drawerItemList = listItems;
+        this.layoutResID = layoutResourceID;
+
+    }
+
+    @Override
+    public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View listItem = LayoutInflater.from(parent.getContext()).inflate(R.layout.group_item, parent, false);
+        return new MyViewHolder(listItem);
+    }
+
+    @Override
+    public void onBindViewHolder(MyViewHolder holder, final int position) {
+        holder.tvGroupTitle.setText(drawerItemList.get(position).getTitle());
+        holder.TVListSubTitle.setText(drawerItemList.get(position).getSubTitle());
+        holder.tvComments.setText(drawerItemList.get(position).getComments());
+        Glide.with(context).load(drawerItemList.get(position).getImage()).into(holder.drawer_icon);
+    }
+
+    @Override
+    public int getItemCount() {
+        return drawerItemList.size();
+    }
+
+    class MyViewHolder extends RecyclerView.ViewHolder {
+        TextView tvGroupTitle;
+        TextView TVListSubTitle;
+        TextView tvComments;
+        ImageView drawer_icon;
+
+
+        MyViewHolder(View itemView) {
+            super(itemView);
+            tvGroupTitle = itemView.findViewById(R.id.tv_group_title);
+            TVListSubTitle = itemView.findViewById(R.id.tv_members);
+            tvComments = itemView.findViewById(R.id.tv_comments);
+            drawer_icon = itemView.findViewById(R.id.iv_group_icon);
+
+        }
+    }
+}

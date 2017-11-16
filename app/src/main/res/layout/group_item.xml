@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <softuvo.com.navigationdrawerbothsides.RoundedImageView
+        android:id="@+id/iv_group_icon"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_margin="13dp"
+        android:scaleType="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_border_width="3dp"
+        app:riv_corner_radius="10dp"
+        app:riv_oval="false" />
+
+    <TextView
+        android:id="@+id/tv_group_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@+id/iv_group_icon"
+        app:layout_constraintTop_toTopOf="@+id/iv_group_icon" />
+
+    <TextView
+        android:id="@+id/tv_members"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textSize="16sp"
+        android:drawableRight="@drawable/ic_group"
+        app:layout_constraintLeft_toRightOf="@+id/iv_group_icon"
+        app:layout_constraintTop_toBottomOf="@id/tv_group_title" />
+
+    <TextView
+        android:id="@+id/tv_comments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_group_icon"
+        app:layout_constraintLeft_toRightOf="@+id/iv_group_icon"
+        app:layout_constraintTop_toBottomOf="@id/tv_members" />
+</android.support.constraint.ConstraintLayout>
