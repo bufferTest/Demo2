@@ -30,7 +30,7 @@ public class Menu_Group_Fragment extends Fragment {
                              Bundle savedInstanceState) {
         View getView = inflater.inflate(R.layout.fragment_menu_group, container, false);
 
-        mSectionsPagerAdapter = new GroupsPagerAdapter(getActivity().getSupportFragmentManager());
+        mSectionsPagerAdapter = new GroupsPagerAdapter(getChildFragmentManager());
 
         mViewPager = getView.findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
