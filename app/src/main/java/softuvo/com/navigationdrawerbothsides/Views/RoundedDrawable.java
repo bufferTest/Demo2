@@ -1,4 +1,4 @@
-package softuvo.com.navigationdrawerbothsides;
+package softuvo.com.navigationdrawerbothsides.Views;
 
 import android.content.res.ColorStateList;
 import android.graphics.Bitmap;

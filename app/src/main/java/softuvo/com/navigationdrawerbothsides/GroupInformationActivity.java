@@ -6,6 +6,7 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 public class GroupInformationActivity extends AppCompatActivity {
@@ -33,5 +34,13 @@ public class GroupInformationActivity extends AppCompatActivity {
             ((LinearLayout) root).setDividerPadding(10);
             ((LinearLayout) root).setDividerDrawable(drawable);
         }
+
+        ImageView menuLeft = findViewById(R.id.menuLeft);
+        menuLeft.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
     }
 }

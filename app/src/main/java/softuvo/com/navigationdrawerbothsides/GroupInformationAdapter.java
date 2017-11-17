@@ -20,7 +20,7 @@ public class GroupInformationAdapter extends FragmentPagerAdapter {
         } else if (position == 2) {
             fragment = new GroupInformationFragment();
         } else if (position == 3) {
-            fragment = new GroupInformationFragment();
+            fragment = new GroupPhotosFragment();
         }
         return fragment;
     }
