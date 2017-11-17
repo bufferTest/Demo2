@@ -23,7 +23,7 @@ import softuvo.com.navigationdrawerbothsides.R;
 
 @SuppressLint("AppCompatCustomView")
 public class RoundedImageView extends ImageView {
-    
+
     private static final int TILE_MODE_UNDEFINED = -2;
     private static final int TILE_MODE_CLAMP = 0;
     private static final int TILE_MODE_REPEAT = 1;

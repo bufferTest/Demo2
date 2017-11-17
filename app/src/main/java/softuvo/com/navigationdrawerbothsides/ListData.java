@@ -8,13 +8,13 @@ class ListData {
 
         List<UpdateModel> updateListData = new ArrayList<UpdateModel>();
         UpdateModel updatemodel = new UpdateModel();
-        updatemodel = new UpdateModel("Soccer","2","Best Team",R.drawable.photo1);
+        updatemodel = new UpdateModel("Soccer", "2", "Best Team", R.drawable.photo1);
         updateListData.add(updatemodel);
 
-        updatemodel = new UpdateModel("Soccer","2","Best Team",R.drawable.photo1);
+        updatemodel = new UpdateModel("Soccer", "2", "Best Team", R.drawable.photo1);
         updateListData.add(updatemodel);
 
-        updatemodel = new UpdateModel("Barcelona","3","Best Team",R.drawable.photo1);
+        updatemodel = new UpdateModel("Barcelona", "3", "Best Team", R.drawable.photo1);
         updateListData.add(updatemodel);
 
         return updateListData;
@@ -30,7 +30,8 @@ class ListData {
             Image = image;
         }
 
-        public UpdateModel() {}
+        public UpdateModel() {
+        }
 
         String subtitle;
         String comments;
@@ -66,6 +67,52 @@ class ListData {
 
         public void setComments(String comments) {
             this.comments = comments;
+        }
+    }
+
+    public static List<events> getEvents() {
+
+        List<events> updateListData = new ArrayList<>();
+        events updatemodel;
+        updatemodel = new events("Birthday", "Chandigarh", "Lovkesh", "19","NOV");
+        updateListData.add(updatemodel);
+        updatemodel = new events("Birthday", "Chandigarh", "Lovkesh", "19","NOV");
+        updateListData.add(updatemodel);
+        updatemodel = new events("Birthday", "Chandigarh", "Lovkesh", "19","NOV");
+        updateListData.add(updatemodel);
+
+
+        return updateListData;
+    }
+
+
+    public static class events {
+        String eventType;
+        String place;
+        String memberType;
+        String date;
+
+        public events(String eventType, String place, String memberType, String date,String Month) {
+            this.eventType = eventType;
+            this.place = place;
+            this.memberType = memberType;
+            this.date = date;
+        }
+
+        public String getEventType() {
+            return eventType;
+        }
+
+        public String getPlace() {
+            return place;
+        }
+
+        public String getMemberType() {
+            return memberType;
+        }
+
+        public String getDate() {
+            return date;
         }
     }
 }

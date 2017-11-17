@@ -10,7 +10,7 @@ import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
-class SharingAccountsAdapter extends RecyclerView.Adapter<SharingAccountsAdapter.MyViewHolder> {
+class ShowMembersAdapter extends RecyclerView.Adapter<ShowMembersAdapter.MyViewHolder> {
     public GroupInformationFragment context;
     public ArrayList<Integer> mValues;
 
@@ -21,13 +21,13 @@ class SharingAccountsAdapter extends RecyclerView.Adapter<SharingAccountsAdapter
         return new MyViewHolder(listItem);
     }
 
-    public SharingAccountsAdapter(GroupInformationFragment context, ArrayList<Integer> myValues) {
+    public ShowMembersAdapter(GroupInformationFragment context, ArrayList<Integer> myValues) {
         this.context = context;
         this.mValues = myValues;
     }
 
     @Override
-    public void onBindViewHolder(SharingAccountsAdapter.MyViewHolder holder, int position) {
+    public void onBindViewHolder(ShowMembersAdapter.MyViewHolder holder, int position) {
         Glide.with(context).load(mValues.get(position)).into(holder.userPic);
     }
 

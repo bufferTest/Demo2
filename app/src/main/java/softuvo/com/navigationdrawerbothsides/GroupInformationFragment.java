@@ -18,7 +18,7 @@ import java.util.ArrayList;
 public class GroupInformationFragment extends Fragment {
     private ImageView lay_cover, iv_profile;
     ArrayList<Integer> users;
-    SharingAccountsAdapter adapter;
+    ShowMembersAdapter adapter;
     RecyclerView rv_members, rv_admin;
     ConstraintLayout lay_members,lay_admin;
 
@@ -39,7 +39,7 @@ public class GroupInformationFragment extends Fragment {
         users.add(R.drawable.photo1);
         users.add(R.drawable.photo1);
 
-        adapter = new SharingAccountsAdapter(this, users);
+        adapter = new ShowMembersAdapter(this, users);
         rv_members = getView.findViewById(R.id.rv_members);
         rv_members.setHasFixedSize(true);
         rv_members.setAdapter(adapter);
