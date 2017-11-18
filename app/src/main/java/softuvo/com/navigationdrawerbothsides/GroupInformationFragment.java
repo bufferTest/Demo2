@@ -1,4 +1,4 @@
-package softuvo.com.navigationdrawerbothsides.fragments;
+package softuvo.com.navigationdrawerbothsides;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,10 +14,6 @@ import android.widget.ImageView;
 import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
-
-import softuvo.com.navigationdrawerbothsides.Activity.GroupMembersShowActivity;
-import softuvo.com.navigationdrawerbothsides.Adapter.ShowMembersAdapter;
-import softuvo.com.navigationdrawerbothsides.R;
 
 public class GroupInformationFragment extends Fragment {
     private ImageView lay_cover, iv_profile;

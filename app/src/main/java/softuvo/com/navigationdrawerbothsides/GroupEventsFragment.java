@@ -1,4 +1,4 @@
-package softuvo.com.navigationdrawerbothsides.fragments;
+package softuvo.com.navigationdrawerbothsides;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -10,14 +10,10 @@ import android.view.ViewGroup;
 
 import java.util.ArrayList;
 
-import softuvo.com.navigationdrawerbothsides.Adapter.GroupActivityAdapter;
-import softuvo.com.navigationdrawerbothsides.ListData;
-import softuvo.com.navigationdrawerbothsides.R;
-
-public class GroupActivityFragment extends Fragment {
-    private ArrayList<ListData.events> users;
-    private GroupActivityAdapter adapter;
-    private RecyclerView rv_events;
+public class GroupEventsFragment extends Fragment {
+    ArrayList<ListData.events> users;
+    GroupEventsAdapter adapter;
+    RecyclerView rv_events;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -26,15 +22,14 @@ public class GroupActivityFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View getView = inflater.inflate(R.layout.frag_group_activity, container, false);
-        users = new ArrayList<>();
+        View getView = inflater.inflate(R.layout.frag_group_events, container, false);
         users.addAll(ListData.getEvents());
-        adapter = new GroupActivityAdapter(getActivity(), users);
+        adapter = new GroupEventsAdapter(getActivity(), users);
         rv_events = getView.findViewById(R.id.rv_events);
         rv_events.setHasFixedSize(true);
         rv_events.setAdapter(adapter);
         LinearLayoutManager llm = new LinearLayoutManager(getActivity());
-        llm.setOrientation(LinearLayoutManager.VERTICAL);
+        llm.setOrientation(LinearLayoutManager.HORIZONTAL);
         rv_events.setLayoutManager(llm);
         return getView;
     }

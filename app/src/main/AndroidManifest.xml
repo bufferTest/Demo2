@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".Activity.MainActivity"
+            android:name=".MainActivity"
             android:label="@string/app_name"
             android:theme="@style/MainActivityTheme">
             <intent-filter>
@@ -20,9 +20,9 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Activity.GroupInformationActivity"
+            android:name=".GroupInformationActivity"
             android:theme="@style/AppTheme" />
-        <activity android:name=".Activity.GroupMembersShowActivity"></activity>
+        <activity android:name=".GroupMembersShowActivity"></activity>
     </application>
 
 </manifest>

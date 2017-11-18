@@ -1,11 +1,8 @@
-package softuvo.com.navigationdrawerbothsides.Adapter;
+package softuvo.com.navigationdrawerbothsides;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-
-import softuvo.com.navigationdrawerbothsides.fragments.Group_Fragment;
-import softuvo.com.navigationdrawerbothsides.fragments.MyGroup_fragment;
 
 public class GroupsPagerAdapter extends FragmentPagerAdapter {
 
