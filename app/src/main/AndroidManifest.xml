@@ -22,6 +22,7 @@
         <activity
             android:name=".GroupInformationActivity"
             android:theme="@style/AppTheme" />
+        <activity android:name=".GroupMembersShowActivity"></activity>
     </application>
 
 </manifest>

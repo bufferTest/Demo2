@@ -1,6 +1,8 @@
 package softuvo.com.navigationdrawerbothsides;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.constraint.ConstraintLayout;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -8,14 +10,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+
 import com.bumptech.glide.Glide;
+
 import java.util.ArrayList;
 
 public class GroupInformationFragment extends Fragment {
     private ImageView lay_cover, iv_profile;
     ArrayList<Integer> users;
-    SharingAccountsAdapter adapter;
+    ShowMembersAdapter adapter;
     RecyclerView rv_members, rv_admin;
+    ConstraintLayout lay_members,lay_admin;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -34,7 +39,7 @@ public class GroupInformationFragment extends Fragment {
         users.add(R.drawable.photo1);
         users.add(R.drawable.photo1);
 
-        adapter = new SharingAccountsAdapter(this, users);
+        adapter = new ShowMembersAdapter(this, users);
         rv_members = getView.findViewById(R.id.rv_members);
         rv_members.setHasFixedSize(true);
         rv_members.setAdapter(adapter);
@@ -48,6 +53,25 @@ public class GroupInformationFragment extends Fragment {
         LinearLayoutManager llm2 = new LinearLayoutManager(getActivity());
         llm2.setOrientation(LinearLayoutManager.HORIZONTAL);
         rv_admin.setLayoutManager(llm2);
+
+        lay_members = getView.findViewById(R.id.lay_members);
+        lay_members.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), GroupMembersShowActivity.class);
+                intent.putExtra("title","Members");
+                getActivity().startActivity(intent);
+            }
+        });
+        lay_admin = getView.findViewById(R.id.lay_admin);
+        lay_admin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), GroupMembersShowActivity.class);
+                intent.putExtra("title","Admin");
+                getActivity().startActivity(intent);
+            }
+        });
         return getView;
     }
 }

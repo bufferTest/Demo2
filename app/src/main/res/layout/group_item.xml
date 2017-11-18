@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <softuvo.com.navigationdrawerbothsides.RoundedImageView
+    <softuvo.com.navigationdrawerbothsides.Views.RoundedImageView
         android:id="@+id/iv_group_icon"
         android:layout_width="70dp"
         android:layout_height="70dp"
