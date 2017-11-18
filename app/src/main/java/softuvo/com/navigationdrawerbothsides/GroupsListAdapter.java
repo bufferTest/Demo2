@@ -1,6 +1,8 @@
 package softuvo.com.navigationdrawerbothsides;
 
 import android.content.Context;
+import android.content.Intent;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -37,6 +39,14 @@ public class GroupsListAdapter extends RecyclerView.Adapter<GroupsListAdapter.My
         holder.TVListSubTitle.setText(drawerItemList.get(position).getSubTitle());
         holder.tvComments.setText(drawerItemList.get(position).getComments());
         Glide.with(context).load(drawerItemList.get(position).getImage()).into(holder.drawer_icon);
+        holder.layGroup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, GroupInformationActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -49,6 +59,7 @@ public class GroupsListAdapter extends RecyclerView.Adapter<GroupsListAdapter.My
         TextView TVListSubTitle;
         TextView tvComments;
         ImageView drawer_icon;
+        ConstraintLayout layGroup;
 
 
         MyViewHolder(View itemView) {
@@ -57,7 +68,7 @@ public class GroupsListAdapter extends RecyclerView.Adapter<GroupsListAdapter.My
             TVListSubTitle = itemView.findViewById(R.id.tv_members);
             tvComments = itemView.findViewById(R.id.tv_comments);
             drawer_icon = itemView.findViewById(R.id.iv_group_icon);
-
+            layGroup = itemView.findViewById(R.id.lay_group);
         }
     }
 }

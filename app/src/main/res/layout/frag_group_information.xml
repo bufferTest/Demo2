@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/lay_cover"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@id/guideline"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <softuvo.com.navigationdrawerbothsides.RoundedImageView
+        android:id="@+id/iv_profile"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="15dp"
+        android:scaleType="center"
+        app:layout_constraintBottom_toBottomOf="@+id/vw_group"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:riv_border_width="3dp"
+        app:riv_corner_radius="10dp"
+        app:riv_oval="false" />
+
+    <TextView
+        android:id="@+id/tv_group_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:padding="3dp"
+        android:text="World Cup"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@+id/iv_profile"
+        app:layout_constraintTop_toBottomOf="@+id/lay_cover" />
+
+    <TextView
+        android:id="@+id/tv_privacy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:padding="2dp"
+        android:text="Public Group"
+        app:layout_constraintLeft_toRightOf="@+id/iv_profile"
+        app:layout_constraintTop_toBottomOf="@+id/tv_group_name" />
+
+    <View
+        android:id="@+id/vw_group"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="#9d9d9e"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_group_name"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_privacy" />
+
+    <TextView
+        android:id="@+id/tv_country"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Russia"
+        app:layout_constraintLeft_toLeftOf="@+id/iv_profile"
+        app:layout_constraintTop_toBottomOf="@+id/vw_group" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/lay_members"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#f8f8f8"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_country">
+
+        <ImageView
+            android:id="@+id/iv_members"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/ic_group"
+            app:layout_constraintBottom_toBottomOf="@+id/lay_members"
+            app:layout_constraintLeft_toLeftOf="@+id/lay_members"
+            app:layout_constraintTop_toTopOf="@+id/lay_members" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Members"
+            app:layout_constraintBottom_toBottomOf="@+id/lay_members"
+            app:layout_constraintLeft_toRightOf="@+id/iv_members"
+            app:layout_constraintTop_toTopOf="@+id/lay_members" />
+
+        <TextView
+            android:id="@+id/tv_members_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:padding="10dp"
+            android:text="2"
+            app:layout_constraintBottom_toBottomOf="@+id/lay_members"
+            app:layout_constraintRight_toLeftOf="@+id/iv_members_show"
+            app:layout_constraintTop_toTopOf="@+id/lay_members" />
+
+        <ImageView
+            android:id="@+id/iv_members_show"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/ic_forward"
+            app:layout_constraintBottom_toBottomOf="@+id/lay_members"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/lay_members" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_members"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lay_members" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/lay_admin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#f8f8f8"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rv_members">
+
+        <ImageView
+            android:id="@+id/iv_admin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/ic_group"
+            app:layout_constraintBottom_toBottomOf="@+id/lay_admin"
+            app:layout_constraintLeft_toLeftOf="@+id/lay_admin"
+            app:layout_constraintTop_toTopOf="@+id/lay_admin" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Admin"
+            app:layout_constraintBottom_toBottomOf="@+id/lay_admin"
+            app:layout_constraintLeft_toRightOf="@+id/iv_admin"
+            app:layout_constraintTop_toTopOf="@+id/lay_admin" />
+
+        <TextView
+            android:id="@+id/tv_admin_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:padding="10dp"
+            android:text="2"
+            app:layout_constraintBottom_toBottomOf="@+id/lay_admin"
+            app:layout_constraintRight_toLeftOf="@+id/iv_admin_show"
+            app:layout_constraintTop_toTopOf="@+id/lay_admin" />
+
+        <ImageView
+            android:id="@+id/iv_admin_show"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/ic_forward"
+            app:layout_constraintBottom_toBottomOf="@+id/lay_admin"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/lay_admin" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_admin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lay_admin" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3" />
+
+</android.support.constraint.ConstraintLayout>

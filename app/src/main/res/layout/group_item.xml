@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lay_group"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
@@ -31,8 +32,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
-        android:textSize="16sp"
         android:drawableRight="@drawable/ic_group"
+        android:textSize="16sp"
         app:layout_constraintLeft_toRightOf="@+id/iv_group_icon"
         app:layout_constraintTop_toBottomOf="@id/tv_group_title" />
 
