@@ -1,4 +1,4 @@
-package softuvo.com.navigationdrawerbothsides;
+package softuvo.com.navigationdrawerbothsides.Activity;
 
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
@@ -8,6 +8,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+
+import softuvo.com.navigationdrawerbothsides.Adapter.GroupInformationAdapter;
+import softuvo.com.navigationdrawerbothsides.R;
 
 public class GroupInformationActivity extends AppCompatActivity {
     private GroupInformationAdapter mSectionsPagerAdapter;

@@ -1,4 +1,4 @@
-package softuvo.com.navigationdrawerbothsides;
+package softuvo.com.navigationdrawerbothsides.Adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,6 +13,10 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 
 import java.util.List;
+
+import softuvo.com.navigationdrawerbothsides.Activity.GroupInformationActivity;
+import softuvo.com.navigationdrawerbothsides.ListData;
+import softuvo.com.navigationdrawerbothsides.R;
 
 public class GroupsListAdapter extends RecyclerView.Adapter<GroupsListAdapter.MyViewHolder> {
     Context context;

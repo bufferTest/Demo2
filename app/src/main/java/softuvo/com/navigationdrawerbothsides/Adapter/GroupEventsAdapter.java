@@ -1,20 +1,19 @@
-package softuvo.com.navigationdrawerbothsides;
+package softuvo.com.navigationdrawerbothsides.Adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-
-import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
-class GroupEventsAdapter extends RecyclerView.Adapter<GroupEventsAdapter.MyViewHolder> {
-    public Context context;
-    public ArrayList<ListData.events> mValues;
+import softuvo.com.navigationdrawerbothsides.ListData;
+import softuvo.com.navigationdrawerbothsides.R;
 
+public class GroupEventsAdapter extends RecyclerView.Adapter<GroupEventsAdapter.MyViewHolder> {
+    private Context context;
+    private ArrayList<ListData.events> mValues;
 
     @Override
     public GroupEventsAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -29,7 +28,6 @@ class GroupEventsAdapter extends RecyclerView.Adapter<GroupEventsAdapter.MyViewH
 
     @Override
     public void onBindViewHolder(GroupEventsAdapter.MyViewHolder holder, int position) {
-
     }
 
     @Override
@@ -37,12 +35,9 @@ class GroupEventsAdapter extends RecyclerView.Adapter<GroupEventsAdapter.MyViewH
         return mValues.size();
     }
 
-    public class MyViewHolder extends RecyclerView.ViewHolder {
-        public ImageView userPic;
-
-        public MyViewHolder(View itemView) {
+    class MyViewHolder extends RecyclerView.ViewHolder {
+        MyViewHolder(View itemView) {
             super(itemView);
-            userPic = itemView.findViewById(R.id.iv_user_pic);
         }
     }
 }

@@ -1,8 +1,7 @@
-package softuvo.com.navigationdrawerbothsides;
+package softuvo.com.navigationdrawerbothsides.fragments;
 
 import android.content.Context;
 import android.graphics.drawable.GradientDrawable;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.RequiresApi;
@@ -13,6 +12,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+
+import softuvo.com.navigationdrawerbothsides.Adapter.GroupsPagerAdapter;
+import softuvo.com.navigationdrawerbothsides.R;
 
 public class Menu_Group_Fragment extends Fragment {
     private GroupsPagerAdapter mSectionsPagerAdapter;
