@@ -1,4 +1,4 @@
-package softuvo.com.navigationdrawerbothsides;
+package softuvo.com.navigationdrawerbothsides.Activity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -9,6 +9,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+
+import softuvo.com.navigationdrawerbothsides.Adapter.GroupMemberShowAdapter;
+import softuvo.com.navigationdrawerbothsides.R;
 
 public class GroupMembersShowActivity extends AppCompatActivity {
     ArrayList<Integer> users;

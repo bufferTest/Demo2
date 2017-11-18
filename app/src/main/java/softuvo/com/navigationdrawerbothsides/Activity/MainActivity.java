@@ -1,6 +1,5 @@
-package softuvo.com.navigationdrawerbothsides;
+package softuvo.com.navigationdrawerbothsides.Activity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.FragmentTransaction;
@@ -9,16 +8,12 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 
-
-import softuvo.com.navigationdrawerbothsides.Activity.PagesFragment;
 import softuvo.com.navigationdrawerbothsides.fragments.ForumsFragment;
+import softuvo.com.navigationdrawerbothsides.fragments.Menu_Group_Fragment;
 import softuvo.com.navigationdrawerbothsides.R;
 import softuvo.com.navigationdrawerbothsides.fragments.QuizzesFragment;
-
-import com.bumptech.glide.Glide;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {

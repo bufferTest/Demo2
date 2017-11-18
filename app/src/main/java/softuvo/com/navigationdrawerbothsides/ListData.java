@@ -3,7 +3,7 @@ package softuvo.com.navigationdrawerbothsides;
 import java.util.ArrayList;
 import java.util.List;
 
-class ListData {
+public class ListData {
     public static List<UpdateModel> getGroupList() {
 
         List<UpdateModel> updateListData = new ArrayList<UpdateModel>();

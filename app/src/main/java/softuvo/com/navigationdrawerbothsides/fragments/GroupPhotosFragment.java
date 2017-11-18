@@ -1,4 +1,4 @@
-package softuvo.com.navigationdrawerbothsides;
+package softuvo.com.navigationdrawerbothsides.fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -8,6 +8,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import java.util.ArrayList;
+
+import softuvo.com.navigationdrawerbothsides.Adapter.GroupPhotosAdapter;
+import softuvo.com.navigationdrawerbothsides.R;
 
 public class GroupPhotosFragment extends Fragment {
     ArrayList<Integer> users;

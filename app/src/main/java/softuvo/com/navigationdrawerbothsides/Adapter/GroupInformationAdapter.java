@@ -1,8 +1,13 @@
-package softuvo.com.navigationdrawerbothsides;
+package softuvo.com.navigationdrawerbothsides.Adapter;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+
+import softuvo.com.navigationdrawerbothsides.fragments.GroupActivityFragment;
+import softuvo.com.navigationdrawerbothsides.fragments.GroupEventsFragment;
+import softuvo.com.navigationdrawerbothsides.fragments.GroupInformationFragment;
+import softuvo.com.navigationdrawerbothsides.fragments.GroupPhotosFragment;
 
 public class GroupInformationAdapter extends FragmentPagerAdapter {
 
@@ -16,7 +21,7 @@ public class GroupInformationAdapter extends FragmentPagerAdapter {
         if (position == 0) {
             fragment = new GroupInformationFragment();
         } else if (position == 1) {
-            fragment = new GroupInformationFragment();
+            fragment = new GroupActivityFragment();
         } else if (position == 2) {
             fragment = new GroupEventsFragment();
         } else if (position == 3) {
