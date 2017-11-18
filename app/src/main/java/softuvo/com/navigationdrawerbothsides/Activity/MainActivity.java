@@ -10,8 +10,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 
+import softuvo.com.navigationdrawerbothsides.fragments.ForumsFragment;
 import softuvo.com.navigationdrawerbothsides.fragments.Menu_Group_Fragment;
 import softuvo.com.navigationdrawerbothsides.R;
+import softuvo.com.navigationdrawerbothsides.fragments.QuizzesFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -84,6 +86,19 @@ public class MainActivity extends AppCompatActivity
             case R.id.item_terms:
                 QuizzesFragment quizzesFragment = new QuizzesFragment();
                 transaction.replace(R.id.fragment_layout, quizzesFragment);
+                transaction.addToBackStack(null);
+                transaction.commit();
+                break;
+
+            case R.id.item_forum:
+                ForumsFragment forumsFragment = new ForumsFragment();
+                transaction.replace(R.id.fragment_layout, forumsFragment);
+                transaction.addToBackStack(null);
+                transaction.commit();
+                break;
+            case R.id.item_pages:
+                PagesFragment pagesFragment = new PagesFragment();
+                transaction.replace(R.id.fragment_layout, pagesFragment);
                 transaction.addToBackStack(null);
                 transaction.commit();
                 break;
