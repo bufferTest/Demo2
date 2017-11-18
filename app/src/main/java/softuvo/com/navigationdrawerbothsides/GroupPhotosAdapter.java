@@ -1,4 +1,4 @@
-package softuvo.com.navigationdrawerbothsides.Adapter;
+package softuvo.com.navigationdrawerbothsides;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -7,9 +7,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import com.bumptech.glide.Glide;
 import java.util.ArrayList;
-
-import softuvo.com.navigationdrawerbothsides.fragments.GroupPhotosFragment;
-import softuvo.com.navigationdrawerbothsides.R;
 
 public class GroupPhotosAdapter extends RecyclerView.Adapter<GroupPhotosAdapter.MyViewHolder> {
     public GroupPhotosFragment context;
