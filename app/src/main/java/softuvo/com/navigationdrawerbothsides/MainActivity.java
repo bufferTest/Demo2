@@ -71,18 +71,25 @@ public class MainActivity extends AppCompatActivity
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
-        int id = item.getItemId();
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 
-        if (id == R.id.item_group) {
-//            startActivity(new Intent(this,Group_Tab.class));
-            Menu_Group_Fragment newFragment = new Menu_Group_Fragment();
-            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-            transaction.replace(R.id.fragment_layout, newFragment);
-            transaction.addToBackStack(null);
-            transaction.commit();
+        switch (item.getItemId()) {
+            case R.id.item_group:
+//           startActivity(new Intent(this,Group_Tab.class));
+                Menu_Group_Fragment newFragment = new Menu_Group_Fragment();
+                transaction.replace(R.id.fragment_layout, newFragment);
+                transaction.addToBackStack(null);
+                transaction.commit();
+                break;
+
+            case R.id.item_terms:
+                QuizzesFragment quizzesFragment = new QuizzesFragment();
+                transaction.replace(R.id.fragment_layout, quizzesFragment);
+                transaction.addToBackStack(null);
+                transaction.commit();
+                break;
+
         }
-
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
