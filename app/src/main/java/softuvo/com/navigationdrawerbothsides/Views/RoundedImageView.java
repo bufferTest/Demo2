@@ -1,4 +1,4 @@
-package softuvo.com.navigationdrawerbothsides;
+package softuvo.com.navigationdrawerbothsides.Views;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -19,10 +19,11 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.widget.ImageView;
 
+import softuvo.com.navigationdrawerbothsides.R;
+
 @SuppressLint("AppCompatCustomView")
 public class RoundedImageView extends ImageView {
 
-    // Constants for tile mode attributes
     private static final int TILE_MODE_UNDEFINED = -2;
     private static final int TILE_MODE_CLAMP = 0;
     private static final int TILE_MODE_REPEAT = 1;

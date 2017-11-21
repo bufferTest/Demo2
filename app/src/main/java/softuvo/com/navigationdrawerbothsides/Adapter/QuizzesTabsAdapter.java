@@ -1,12 +1,16 @@
-package softuvo.com.navigationdrawerbothsides;
+package softuvo.com.navigationdrawerbothsides.Adapter;
+
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-public class GroupsPagerAdapter extends FragmentPagerAdapter {
+import softuvo.com.navigationdrawerbothsides.fragments.AllQuizzesFragment;
+import softuvo.com.navigationdrawerbothsides.fragments.MyQuizzesFragment;
 
-    public GroupsPagerAdapter(FragmentManager fm) {
+public class QuizzesTabsAdapter extends FragmentPagerAdapter {
+
+    public QuizzesTabsAdapter(FragmentManager fm) {
         super(fm);
     }
 
@@ -14,9 +18,9 @@ public class GroupsPagerAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         Fragment fragment = null;
         if (position == 0) {
-            fragment = new Group_Fragment();
+            fragment = new AllQuizzesFragment();
         } else if (position == 1) {
-            fragment = new MyGroup_fragment();
+            fragment = new MyQuizzesFragment();
         }
         return fragment;
     }
@@ -30,9 +34,9 @@ public class GroupsPagerAdapter extends FragmentPagerAdapter {
     public CharSequence getPageTitle(int position) {
         switch (position) {
             case 0:
-                return "Groups";
+                return "All Quizess";
             case 1:
-                return "My Groups";
+                return "My Quizess";
         }
         return null;
     }

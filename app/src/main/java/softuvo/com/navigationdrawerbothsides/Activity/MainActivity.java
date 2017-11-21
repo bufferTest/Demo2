@@ -1,6 +1,5 @@
-package softuvo.com.navigationdrawerbothsides;
+package softuvo.com.navigationdrawerbothsides.Activity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.FragmentTransaction;
@@ -9,10 +8,12 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 
-import com.bumptech.glide.Glide;
+import softuvo.com.navigationdrawerbothsides.fragments.ForumsFragment;
+import softuvo.com.navigationdrawerbothsides.fragments.Menu_Group_Fragment;
+import softuvo.com.navigationdrawerbothsides.R;
+import softuvo.com.navigationdrawerbothsides.fragments.QuizzesFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -71,18 +72,38 @@ public class MainActivity extends AppCompatActivity
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
-        int id = item.getItemId();
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 
-        if (id == R.id.item_group) {
-//            startActivity(new Intent(this,Group_Tab.class));
-            Menu_Group_Fragment newFragment = new Menu_Group_Fragment();
-            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-            transaction.replace(R.id.fragment_layout, newFragment);
-            transaction.addToBackStack(null);
-            transaction.commit();
+        switch (item.getItemId()) {
+            case R.id.item_group:
+//           startActivity(new Intent(this,Group_Tab.class));
+                Menu_Group_Fragment newFragment = new Menu_Group_Fragment();
+                transaction.replace(R.id.fragment_layout, newFragment);
+                transaction.addToBackStack(null);
+                transaction.commit();
+                break;
+
+            case R.id.item_terms:
+                QuizzesFragment quizzesFragment = new QuizzesFragment();
+                transaction.replace(R.id.fragment_layout, quizzesFragment);
+                transaction.addToBackStack(null);
+                transaction.commit();
+                break;
+
+            case R.id.item_forum:
+                ForumsFragment forumsFragment = new ForumsFragment();
+                transaction.replace(R.id.fragment_layout, forumsFragment);
+                transaction.addToBackStack(null);
+                transaction.commit();
+                break;
+            case R.id.item_pages:
+                PagesFragment pagesFragment = new PagesFragment();
+                transaction.replace(R.id.fragment_layout, pagesFragment);
+                transaction.addToBackStack(null);
+                transaction.commit();
+                break;
+
         }
-
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
