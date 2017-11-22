@@ -1,7 +1,9 @@
 package softuvo.com.navigationdrawerbothsides.Activity;
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -10,14 +12,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 
+import softuvo.com.navigationdrawerbothsides.R;
 import softuvo.com.navigationdrawerbothsides.fragments.ForumsFragment;
 import softuvo.com.navigationdrawerbothsides.fragments.Menu_Group_Fragment;
-import softuvo.com.navigationdrawerbothsides.R;
 import softuvo.com.navigationdrawerbothsides.fragments.QuizzesFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-    DrawerLayout drawer;
+    private DrawerLayout drawer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,7 +61,6 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else if (drawer.isDrawerOpen(GravityCompat.END)) {
@@ -71,41 +72,34 @@ public class MainActivity extends AppCompatActivity
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-
+        Fragment fragment = null;
         switch (item.getItemId()) {
             case R.id.item_group:
-//           startActivity(new Intent(this,Group_Tab.class));
-                Menu_Group_Fragment newFragment = new Menu_Group_Fragment();
-                transaction.replace(R.id.fragment_layout, newFragment);
-                transaction.addToBackStack(null);
-                transaction.commit();
+                fragment = new Menu_Group_Fragment();
                 break;
-
             case R.id.item_terms:
-                QuizzesFragment quizzesFragment = new QuizzesFragment();
-                transaction.replace(R.id.fragment_layout, quizzesFragment);
-                transaction.addToBackStack(null);
-                transaction.commit();
+                fragment = new QuizzesFragment();
                 break;
 
             case R.id.item_forum:
-                ForumsFragment forumsFragment = new ForumsFragment();
-                transaction.replace(R.id.fragment_layout, forumsFragment);
-                transaction.addToBackStack(null);
-                transaction.commit();
+                fragment = new ForumsFragment();
                 break;
             case R.id.item_pages:
-                PagesFragment pagesFragment = new PagesFragment();
-                transaction.replace(R.id.fragment_layout, pagesFragment);
-                transaction.addToBackStack(null);
-                transaction.commit();
+                fragment = new PagesFragment();
                 break;
 
         }
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
+        if (fragment != null) {
+            transaction.replace(R.id.fragment_layout, fragment);
+            transaction.addToBackStack(null);
+            transaction.commit();
+        }
+        if (drawer.isDrawerOpen(GravityCompat.START))
+            drawer.closeDrawer(GravityCompat.START);
+        else if (drawer.isDrawerOpen(GravityCompat.END))
+            drawer.closeDrawer(GravityCompat.END);
         return true;
     }
 }

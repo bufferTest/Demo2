@@ -20,12 +20,13 @@ import android.support.annotation.ColorInt;
 import android.support.annotation.NonNull;
 import android.util.Log;
 import android.widget.ImageView.ScaleType;
+
 import java.util.HashSet;
 import java.util.Set;
 
 @SuppressWarnings("UnusedDeclaration")
 public class RoundedDrawable extends Drawable {
-
+    
     public static final String TAG = "RoundedDrawable";
     public static final int DEFAULT_BORDER_COLOR = Color.WHITE;
 
@@ -47,14 +48,14 @@ public class RoundedDrawable extends Drawable {
 
     private float mCornerRadius = 0f;
     // [ topLeft, topRight, bottomLeft, bottomRight ]
-    private final boolean[] mCornersRounded = new boolean[] { true, true, true, true };
+    private final boolean[] mCornersRounded = new boolean[]{true, true, true, true};
 
     private boolean mOval = false;
     private float mBorderWidth = 0;
     private ColorStateList mBorderColor = ColorStateList.valueOf(DEFAULT_BORDER_COLOR);
     private ScaleType mScaleType = ScaleType.FIT_CENTER;
 
-    public RoundedDrawable(Bitmap bitmap) {
+    private RoundedDrawable(Bitmap bitmap) {
         mBitmap = bitmap;
 
         mBitmapWidth = bitmap.getWidth();
@@ -72,7 +73,7 @@ public class RoundedDrawable extends Drawable {
         mBorderPaint.setStrokeWidth(mBorderWidth);
     }
 
-    public static RoundedDrawable fromBitmap(Bitmap bitmap) {
+    static RoundedDrawable fromBitmap(Bitmap bitmap) {
         if (bitmap != null) {
             return new RoundedDrawable(bitmap);
         } else {
@@ -80,7 +81,7 @@ public class RoundedDrawable extends Drawable {
         }
     }
 
-    public static Drawable fromDrawable(Drawable drawable) {
+    static Drawable fromDrawable(Drawable drawable) {
         if (drawable != null) {
             if (drawable instanceof RoundedDrawable) {
                 // just return if it's already a RoundedDrawable
@@ -106,7 +107,7 @@ public class RoundedDrawable extends Drawable {
         return drawable;
     }
 
-    public static Bitmap drawableToBitmap(Drawable drawable) {
+    private static Bitmap drawableToBitmap(Drawable drawable) {
         if (drawable instanceof BitmapDrawable) {
             return ((BitmapDrawable) drawable).getBitmap();
         }
@@ -471,14 +472,14 @@ public class RoundedDrawable extends Drawable {
     /**
      * Sets the corner radii of all the corners.
      *
-     * @param topLeft top left corner radius.
-     * @param topRight top right corner radius
+     * @param topLeft     top left corner radius.
+     * @param topRight    top right corner radius
      * @param bottomRight bototm right corner radius.
-     * @param bottomLeft bottom left corner radius.
+     * @param bottomLeft  bottom left corner radius.
      * @return the {@link RoundedDrawable} for chaining.
      */
-    public RoundedDrawable setCornerRadius(float topLeft, float topRight, float bottomRight,
-                                           float bottomLeft) {
+    RoundedDrawable setCornerRadius(float topLeft, float topRight, float bottomRight,
+                                    float bottomLeft) {
         Set<Float> radiusSet = new HashSet<>(4);
         radiusSet.add(topLeft);
         radiusSet.add(topRight);
@@ -512,7 +513,7 @@ public class RoundedDrawable extends Drawable {
         return mBorderWidth;
     }
 
-    public RoundedDrawable setBorderWidth(float width) {
+    RoundedDrawable setBorderWidth(float width) {
         mBorderWidth = width;
         mBorderPaint.setStrokeWidth(mBorderWidth);
         return this;
@@ -530,7 +531,7 @@ public class RoundedDrawable extends Drawable {
         return mBorderColor;
     }
 
-    public RoundedDrawable setBorderColor(ColorStateList colors) {
+    RoundedDrawable setBorderColor(ColorStateList colors) {
         mBorderColor = colors != null ? colors : ColorStateList.valueOf(0);
         mBorderPaint.setColor(mBorderColor.getColorForState(getState(), DEFAULT_BORDER_COLOR));
         return this;
@@ -540,7 +541,7 @@ public class RoundedDrawable extends Drawable {
         return mOval;
     }
 
-    public RoundedDrawable setOval(boolean oval) {
+    RoundedDrawable setOval(boolean oval) {
         mOval = oval;
         return this;
     }
@@ -577,7 +578,7 @@ public class RoundedDrawable extends Drawable {
         return mTileModeY;
     }
 
-    public RoundedDrawable setTileModeY(Shader.TileMode tileModeY) {
+    RoundedDrawable setTileModeY(Shader.TileMode tileModeY) {
         if (mTileModeY != tileModeY) {
             mTileModeY = tileModeY;
             mRebuildShader = true;
@@ -597,14 +598,18 @@ public class RoundedDrawable extends Drawable {
 
     private static boolean any(boolean[] booleans) {
         for (boolean b : booleans) {
-            if (b) { return true; }
+            if (b) {
+                return true;
+            }
         }
         return false;
     }
 
     private static boolean all(boolean[] booleans) {
         for (boolean b : booleans) {
-            if (b) { return false; }
+            if (b) {
+                return false;
+            }
         }
         return true;
     }
