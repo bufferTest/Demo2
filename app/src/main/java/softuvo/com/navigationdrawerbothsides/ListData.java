@@ -115,4 +115,8 @@ public class ListData {
             return date;
         }
     }
+
+
+    public static class Forums{
+    }
 }
