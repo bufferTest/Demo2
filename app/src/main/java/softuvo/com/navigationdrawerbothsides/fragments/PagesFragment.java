@@ -1,4 +1,4 @@
-package softuvo.com.navigationdrawerbothsides.Activity;
+package softuvo.com.navigationdrawerbothsides.fragments;
 
 import android.content.Context;
 import android.graphics.drawable.GradientDrawable;
@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
+import softuvo.com.navigationdrawerbothsides.Adapter.PagesAdapter;
 import softuvo.com.navigationdrawerbothsides.R;
 
 public class PagesFragment extends Fragment {

@@ -14,7 +14,7 @@ public class ForumsAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         Fragment fragment = null;
         if (position == 0) {
-            fragment = new Group_Fragment();
+            fragment = new ShowForumsFragment();
         } else if (position == 1) {
             fragment = new MyGroup_fragment();
         } else if (position == 2) {

@@ -27,8 +27,8 @@ import java.util.Set;
 @SuppressWarnings("UnusedDeclaration")
 public class RoundedDrawable extends Drawable {
 
-    private static final String TAG = "RoundedDrawable";
-    static final int DEFAULT_BORDER_COLOR = Color.WHITE;
+    public static final String TAG = "RoundedDrawable";
+    public static final int DEFAULT_BORDER_COLOR = Color.WHITE;
 
     private final RectF mBounds = new RectF();
     private final RectF mDrawableRect = new RectF();

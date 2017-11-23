@@ -26,7 +26,6 @@ public class Menu_Group_Fragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
     }
 
     @RequiresApi(api = Build.VERSION_CODES.ICE_CREAM_SANDWICH)

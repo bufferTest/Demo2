@@ -46,4 +46,11 @@
         app:layout_constraintBottom_toBottomOf="@+id/iv_group_icon"
         app:layout_constraintLeft_toRightOf="@+id/iv_group_icon"
         app:layout_constraintTop_toBottomOf="@id/tv_members" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:background="@color/divider_color"
+        app:layout_constraintTop_toBottomOf="@+id/tv_comments" />
 </android.support.constraint.ConstraintLayout>

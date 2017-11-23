@@ -34,9 +34,9 @@ public class QuizzesTabsAdapter extends FragmentPagerAdapter {
     public CharSequence getPageTitle(int position) {
         switch (position) {
             case 0:
-                return "All Quizess";
+                return "All Quizzes";
             case 1:
-                return "My Quizess";
+                return "My Quizzes";
         }
         return null;
     }

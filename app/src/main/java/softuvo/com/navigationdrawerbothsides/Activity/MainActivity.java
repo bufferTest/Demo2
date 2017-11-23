@@ -15,6 +15,7 @@ import android.widget.ImageView;
 import softuvo.com.navigationdrawerbothsides.R;
 import softuvo.com.navigationdrawerbothsides.fragments.ForumsFragment;
 import softuvo.com.navigationdrawerbothsides.fragments.Menu_Group_Fragment;
+import softuvo.com.navigationdrawerbothsides.fragments.PagesFragment;
 import softuvo.com.navigationdrawerbothsides.fragments.QuizzesFragment;
 
 public class MainActivity extends AppCompatActivity
