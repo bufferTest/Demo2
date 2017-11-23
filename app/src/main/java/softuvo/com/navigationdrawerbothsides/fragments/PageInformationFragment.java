@@ -19,7 +19,7 @@ import softuvo.com.navigationdrawerbothsides.Activity.GroupMembersShowActivity;
 import softuvo.com.navigationdrawerbothsides.Adapter.ShowMembersAdapter;
 import softuvo.com.navigationdrawerbothsides.R;
 
-public class GroupInformationFragment extends Fragment {
+public class PageInformationFragment extends Fragment {
     private ImageView lay_cover, iv_profile;
     ArrayList<Integer> users;
     ShowMembersAdapter adapter;
@@ -50,13 +50,6 @@ public class GroupInformationFragment extends Fragment {
         LinearLayoutManager llm = new LinearLayoutManager(getActivity());
         llm.setOrientation(LinearLayoutManager.HORIZONTAL);
         rv_members.setLayoutManager(llm);
-
-        rv_admin = getView.findViewById(R.id.rv_admin);
-        rv_admin.setHasFixedSize(true);
-        rv_admin.setAdapter(adapter);
-        LinearLayoutManager llm2 = new LinearLayoutManager(getActivity());
-        llm2.setOrientation(LinearLayoutManager.HORIZONTAL);
-        rv_admin.setLayoutManager(llm2);
 
         lay_members = getView.findViewById(R.id.lay_members);
         lay_members.setOnClickListener(new View.OnClickListener() {

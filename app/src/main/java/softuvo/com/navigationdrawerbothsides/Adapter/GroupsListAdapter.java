@@ -21,14 +21,11 @@ import softuvo.com.navigationdrawerbothsides.R;
 public class GroupsListAdapter extends RecyclerView.Adapter<GroupsListAdapter.MyViewHolder> {
     Context context;
     List<ListData.UpdateModel> drawerItemList;
-    int layoutResID;
 
-    public GroupsListAdapter(Context context, int layoutResourceID,
+    public GroupsListAdapter(Context context,
                              List<ListData.UpdateModel> listItems) {
         this.context = context;
         this.drawerItemList = listItems;
-        this.layoutResID = layoutResourceID;
-
     }
 
     @Override

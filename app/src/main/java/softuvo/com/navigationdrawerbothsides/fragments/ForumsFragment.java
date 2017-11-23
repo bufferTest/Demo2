@@ -13,7 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
-import softuvo.com.navigationdrawerbothsides.Adapter.GroupsPagerAdapter;
+import softuvo.com.navigationdrawerbothsides.Adapter.ForumsAdapter;
 import softuvo.com.navigationdrawerbothsides.R;
 
 public class ForumsFragment extends Fragment {

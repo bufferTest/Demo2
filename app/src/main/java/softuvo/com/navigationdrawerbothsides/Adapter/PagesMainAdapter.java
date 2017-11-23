@@ -4,12 +4,12 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import softuvo.com.navigationdrawerbothsides.fragments.Group_Fragment;
 import softuvo.com.navigationdrawerbothsides.fragments.MyGroup_fragment;
+import softuvo.com.navigationdrawerbothsides.fragments.Pages_Fragment;
 
-public class PagesAdapter extends FragmentPagerAdapter {
+public class PagesMainAdapter extends FragmentPagerAdapter {
 
-    public PagesAdapter(FragmentManager fm) {
+    public PagesMainAdapter(FragmentManager fm) {
         super(fm);
     }
 
@@ -17,9 +17,9 @@ public class PagesAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         Fragment fragment = null;
         if (position == 0)
-            fragment = new Group_Fragment();
+            fragment = new Pages_Fragment();
         else if (position == 1)
-            fragment = new MyGroup_fragment();
+            fragment = new Pages_Fragment();
 
         return fragment;
     }

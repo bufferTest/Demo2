@@ -26,7 +26,7 @@ public class Group_Fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View getView = inflater.inflate(R.layout.fragment_groups, container, false);
         grouplist = getView.findViewById(R.id.listview);
-        GroupsListAdapter adapter = new GroupsListAdapter(getActivity(), R.layout.group_item, ListData.getGroupList());
+        GroupsListAdapter adapter = new GroupsListAdapter(getActivity(), ListData.getGroupList());
         LinearLayoutManager llm = new LinearLayoutManager(getActivity());
         llm.setOrientation(LinearLayoutManager.VERTICAL);
         grouplist.setHasFixedSize(true);

@@ -12,7 +12,7 @@
             android:id="@+id/lay_discussions"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:background="#f8f8f8"
+            android:background="#F3F6F7"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/lay_app_bar">
@@ -71,7 +71,7 @@
             android:id="@+id/lay_computer"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:background="#f8f8f8"
+            android:background="#F3F6F7"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/rv_members">

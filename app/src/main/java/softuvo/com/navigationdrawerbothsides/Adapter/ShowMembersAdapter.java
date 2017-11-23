@@ -1,5 +1,7 @@
 package softuvo.com.navigationdrawerbothsides.Adapter;
 
+import android.app.Fragment;
+import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,7 +16,7 @@ import softuvo.com.navigationdrawerbothsides.fragments.GroupInformationFragment;
 import softuvo.com.navigationdrawerbothsides.R;
 
 public class ShowMembersAdapter extends RecyclerView.Adapter<ShowMembersAdapter.MyViewHolder> {
-    public GroupInformationFragment context;
+    public Context context;
     public ArrayList<Integer> mValues;
 
 
@@ -24,7 +26,7 @@ public class ShowMembersAdapter extends RecyclerView.Adapter<ShowMembersAdapter.
         return new MyViewHolder(listItem);
     }
 
-    public ShowMembersAdapter(GroupInformationFragment context, ArrayList<Integer> myValues) {
+    public ShowMembersAdapter(Context context, ArrayList<Integer> myValues) {
         this.context = context;
         this.mValues = myValues;
     }

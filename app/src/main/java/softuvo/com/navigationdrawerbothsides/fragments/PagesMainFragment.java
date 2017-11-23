@@ -13,11 +13,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
-import softuvo.com.navigationdrawerbothsides.Adapter.PagesAdapter;
+import softuvo.com.navigationdrawerbothsides.Adapter.PagesMainAdapter;
 import softuvo.com.navigationdrawerbothsides.R;
 
-public class PagesFragment extends Fragment {
-    private PagesAdapter mSectionsPagerAdapter;
+public class PagesMainFragment extends Fragment {
+    private PagesMainAdapter mSectionsPagerAdapter;
     private ViewPager mViewPager;
 
     @Override
@@ -30,9 +30,9 @@ public class PagesFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View getView = inflater.inflate(R.layout.fragment_pages, container, false);
+        View getView = inflater.inflate(R.layout.fragment_main_pages, container, false);
 
-        mSectionsPagerAdapter = new PagesAdapter(getChildFragmentManager());
+        mSectionsPagerAdapter = new PagesMainAdapter(getChildFragmentManager());
 
         mViewPager = getView.findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
