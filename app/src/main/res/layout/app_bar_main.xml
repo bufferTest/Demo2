@@ -6,19 +6,19 @@
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="45dp"
+        android:background="@android:color/holo_blue_dark">
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/holo_blue_dark">
+            android:layout_height="wrap_content">
 
             <ImageView
                 android:id="@+id/menuLeft"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintLeft_toLeftOf="parent"
                 android:padding="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/ic_menu" />
 
@@ -27,10 +27,10 @@
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/menuLeft"
+                android:src="@drawable/bubble"
                 app:layout_constraintBottom_toBottomOf="@+id/menuLeft"
-                android:src="@drawable/bubble" />
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/menuLeft" />
         </android.support.constraint.ConstraintLayout>
 
     </android.support.design.widget.AppBarLayout>

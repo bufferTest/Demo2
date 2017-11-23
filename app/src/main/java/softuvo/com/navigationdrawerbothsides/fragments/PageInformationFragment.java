@@ -23,8 +23,8 @@ public class PageInformationFragment extends Fragment {
     private ImageView lay_cover, iv_profile;
     ArrayList<Integer> users;
     ShowMembersAdapter adapter;
-    RecyclerView rv_members, rv_admin;
-    ConstraintLayout lay_members,lay_admin;
+    RecyclerView rv_likes;
+    ConstraintLayout lay_members;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -33,7 +33,7 @@ public class PageInformationFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View getView = inflater.inflate(R.layout.frag_group_information, container, false);
+        View getView = inflater.inflate(R.layout.frag_page_information, container, false);
         lay_cover = getView.findViewById(R.id.lay_cover);
         iv_profile = getView.findViewById(R.id.iv_profile);
         Glide.with(getActivity()).load(R.drawable.photo1).into(lay_cover);
@@ -44,28 +44,19 @@ public class PageInformationFragment extends Fragment {
         users.add(R.drawable.photo1);
 
         adapter = new ShowMembersAdapter(getActivity(), users);
-        rv_members = getView.findViewById(R.id.rv_members);
-        rv_members.setHasFixedSize(true);
-        rv_members.setAdapter(adapter);
+        rv_likes = getView.findViewById(R.id.rv_likes);
+        rv_likes.setHasFixedSize(true);
+        rv_likes.setAdapter(adapter);
         LinearLayoutManager llm = new LinearLayoutManager(getActivity());
         llm.setOrientation(LinearLayoutManager.HORIZONTAL);
-        rv_members.setLayoutManager(llm);
+        rv_likes.setLayoutManager(llm);
 
-        lay_members = getView.findViewById(R.id.lay_members);
+        lay_members = getView.findViewById(R.id.lay_likes);
         lay_members.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), GroupMembersShowActivity.class);
-                intent.putExtra("title","Members");
-                getActivity().startActivity(intent);
-            }
-        });
-        lay_admin = getView.findViewById(R.id.lay_admin);
-        lay_admin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), GroupMembersShowActivity.class);
-                intent.putExtra("title","Admin");
+                intent.putExtra("title","Likes");
                 getActivity().startActivity(intent);
             }
         });

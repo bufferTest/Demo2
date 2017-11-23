@@ -12,6 +12,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 
+import softuvo.com.navigationdrawerbothsides.fragments.MarketPlaceFragment;
 import softuvo.com.navigationdrawerbothsides.R;
 import softuvo.com.navigationdrawerbothsides.fragments.ForumsFragment;
 import softuvo.com.navigationdrawerbothsides.fragments.Menu_Group_Fragment;
@@ -89,6 +90,9 @@ public class MainActivity extends AppCompatActivity
                 break;
             case R.id.item_pages:
                 fragment = new PagesMainFragment();
+                break;
+            case R.id.item_marketplace:
+                fragment = new MarketPlaceFragment();
                 break;
 
         }
