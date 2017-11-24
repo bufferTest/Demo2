@@ -14,6 +14,7 @@ import com.bumptech.glide.Glide;
 import java.util.ArrayList;
 
 import softuvo.com.navigationdrawerbothsides.Activity.GroupInformationActivity;
+import softuvo.com.navigationdrawerbothsides.Activity.QuizzesInformationActivity;
 import softuvo.com.navigationdrawerbothsides.R;
 
 public class AllQuizzesAdapter extends RecyclerView.Adapter<AllQuizzesAdapter.MyViewHolder> {
@@ -39,7 +40,7 @@ public class AllQuizzesAdapter extends RecyclerView.Adapter<AllQuizzesAdapter.My
         holder.layQuize.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context, GroupInformationActivity.class);
+                Intent intent = new Intent(context, QuizzesInformationActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(intent);
             }
