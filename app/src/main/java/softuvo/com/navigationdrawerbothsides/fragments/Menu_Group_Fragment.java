@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
+import softuvo.com.navigationdrawerbothsides.Activity.MainActivity;
 import softuvo.com.navigationdrawerbothsides.Adapter.GroupsPagerAdapter;
 import softuvo.com.navigationdrawerbothsides.R;
 
@@ -33,7 +34,7 @@ public class Menu_Group_Fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View getView = inflater.inflate(R.layout.fragment_menu_group, container, false);
-
+        ((MainActivity)getActivity()).setTitle("Groups");
         mSectionsPagerAdapter = new GroupsPagerAdapter(getChildFragmentManager());
 
         mViewPager = getView.findViewById(R.id.container);

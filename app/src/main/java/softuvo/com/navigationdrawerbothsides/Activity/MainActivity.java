@@ -11,7 +11,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
+import softuvo.com.navigationdrawerbothsides.fragments.BlogMainFragment;
 import softuvo.com.navigationdrawerbothsides.fragments.MarketPlaceFragment;
 import softuvo.com.navigationdrawerbothsides.R;
 import softuvo.com.navigationdrawerbothsides.fragments.ForumsFragment;
@@ -22,6 +24,7 @@ import softuvo.com.navigationdrawerbothsides.fragments.QuizzesFragment;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     private DrawerLayout drawer;
+    TextView tv_title;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +32,7 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
 
         drawer = findViewById(R.id.drawer_layout);
+        tv_title = findViewById(R.id.tv_title);
 
         ImageView menuLeft = findViewById(R.id.menuLeft);
         ImageView menuRight = findViewById(R.id.menuRight);
@@ -94,6 +98,9 @@ public class MainActivity extends AppCompatActivity
             case R.id.item_marketplace:
                 fragment = new MarketPlaceFragment();
                 break;
+            case R.id.item_blog:
+                fragment = new BlogMainFragment();
+                break;
 
         }
         if (fragment != null) {
@@ -106,5 +113,9 @@ public class MainActivity extends AppCompatActivity
         else if (drawer.isDrawerOpen(GravityCompat.END))
             drawer.closeDrawer(GravityCompat.END);
         return true;
+    }
+
+    public void setTitle(String title) {
+        tv_title.setText(title);
     }
 }

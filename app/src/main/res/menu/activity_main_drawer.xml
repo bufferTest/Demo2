@@ -24,7 +24,7 @@
         android:icon="@drawable/market"
         android:title="Marketplace" />
     <item
-        android:id="@+id/item_support"
+        android:id="@+id/item_blog"
         android:icon="@drawable/blog"
         android:title="Blogs" />
     <item

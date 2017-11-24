@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
+import softuvo.com.navigationdrawerbothsides.Activity.MainActivity;
 import softuvo.com.navigationdrawerbothsides.Adapter.PagesMainAdapter;
 import softuvo.com.navigationdrawerbothsides.R;
 
@@ -31,6 +32,7 @@ public class PagesMainFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View getView = inflater.inflate(R.layout.fragment_main_pages, container, false);
+        ((MainActivity)getActivity()).setTitle("Pages");
 
         mSectionsPagerAdapter = new PagesMainAdapter(getChildFragmentManager());
 

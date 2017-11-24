@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
+import softuvo.com.navigationdrawerbothsides.Activity.MainActivity;
 import softuvo.com.navigationdrawerbothsides.Adapter.PagesMarketplaceAdapter;
 import softuvo.com.navigationdrawerbothsides.R;
 
@@ -31,7 +32,7 @@ public class MarketPlaceFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View getView = inflater.inflate(R.layout.fragment_marketplace, container, false);
-
+        ((MainActivity)getActivity()).setTitle("MarketPlace");
         mSectionsPagerAdapter = new PagesMarketplaceAdapter(getChildFragmentManager());
 
         mViewPager = getView.findViewById(R.id.container);
