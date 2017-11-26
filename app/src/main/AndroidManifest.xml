@@ -28,7 +28,11 @@
         <activity
             android:name=".Activity.PageInformationActivity"
             android:theme="@style/AppTheme" />
-        <activity android:name=".Activity.QuizzesInformationActivity"></activity>
+        <activity android:name=".Activity.PersonProfileActivity" />
+        <activity android:name=".Activity.PollsInformationActivity" />
+        <activity android:name=".Activity.PollResultsActivity" />
+        <activity android:name=".Activity.QuizInformationActivity" />
+        <activity android:name=".Activity.AddGroupActivity"></activity>
     </application>
 
 </manifest>

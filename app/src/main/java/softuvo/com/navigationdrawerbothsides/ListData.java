@@ -117,6 +117,11 @@ public class ListData {
     }
 
 
-    public static class Forums{
+    public static ArrayList<Integer> dummyPhotos(){
+        ArrayList<Integer> users1 = new ArrayList<>();
+        users1.add(R.drawable.photo1);
+        users1.add(R.drawable.photo1);
+        users1.add(R.drawable.photo1);
+        return users1;
     }
 }

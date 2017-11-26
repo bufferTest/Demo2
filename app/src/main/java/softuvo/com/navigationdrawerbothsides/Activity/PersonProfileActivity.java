@@ -13,7 +13,7 @@ import softuvo.com.navigationdrawerbothsides.Adapter.GroupInformationAdapter;
 import softuvo.com.navigationdrawerbothsides.Adapter.QuizzesInformationAdapter;
 import softuvo.com.navigationdrawerbothsides.R;
 
-public class QuizzesInformationActivity extends AppCompatActivity {
+public class PersonProfileActivity extends AppCompatActivity {
     private QuizzesInformationAdapter mSectionsPagerAdapter;
     private ViewPager mViewPager;
 

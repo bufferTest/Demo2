@@ -6,6 +6,7 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:checkboxStyle">@style/checkBoxStyle</item>
     </style>
 
     <style name="MainActivityTheme" parent="Theme.AppCompat.Light.NoActionBar">
@@ -26,6 +27,12 @@
         <item name="android:divider">@drawable/divider</item>
         <item name="android:showDividers">middle</item>
         <item name="android:dividerPadding">12dip</item>
+    </style>
+
+    <style name="checkBoxStyle" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="colorAccent">#046EEA</item>
+        <item name="android:textColorSecondary">@android:color/darker_gray</item>
+        <item name="android:textColor">@android:color/darker_gray</item>
     </style>
 
 </resources>

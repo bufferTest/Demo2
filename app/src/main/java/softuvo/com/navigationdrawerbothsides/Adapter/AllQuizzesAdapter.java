@@ -8,13 +8,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
-import softuvo.com.navigationdrawerbothsides.Activity.GroupInformationActivity;
-import softuvo.com.navigationdrawerbothsides.Activity.QuizzesInformationActivity;
+import softuvo.com.navigationdrawerbothsides.Activity.PersonProfileActivity;
+import softuvo.com.navigationdrawerbothsides.Activity.QuizInformationActivity;
 import softuvo.com.navigationdrawerbothsides.R;
 
 public class AllQuizzesAdapter extends RecyclerView.Adapter<AllQuizzesAdapter.MyViewHolder> {
@@ -40,7 +41,15 @@ public class AllQuizzesAdapter extends RecyclerView.Adapter<AllQuizzesAdapter.My
         holder.layQuize.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context, QuizzesInformationActivity.class);
+                Intent intent = new Intent(context, QuizInformationActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(intent);
+            }
+        });
+        holder.tv_members.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, PersonProfileActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(intent);
             }
@@ -55,11 +64,13 @@ public class AllQuizzesAdapter extends RecyclerView.Adapter<AllQuizzesAdapter.My
     class MyViewHolder extends RecyclerView.ViewHolder {
        private ImageView userPic;
        private ConstraintLayout layQuize ;
+       private TextView tv_members;
 
         public MyViewHolder(View itemView) {
             super(itemView);
             userPic = itemView.findViewById(R.id.iv_group_icon);
             layQuize = itemView.findViewById(R.id.lay_quize);
+            tv_members = itemView.findViewById(R.id.tv_members);
 
         }
     }

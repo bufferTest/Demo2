@@ -28,7 +28,7 @@
         android:icon="@drawable/blog"
         android:title="Blogs" />
     <item
-        android:id="@+id/item_faq"
+        android:id="@+id/item_polls"
         android:icon="@drawable/ic_menu_camera"
         android:title="Polls" />
     <item

@@ -1,7 +1,6 @@
 package softuvo.com.navigationdrawerbothsides.fragments;
 
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Build;
 import android.os.Bundle;
@@ -10,56 +9,32 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
-import softuvo.com.navigationdrawerbothsides.Activity.AddGroupActivity;
 import softuvo.com.navigationdrawerbothsides.Activity.MainActivity;
-import softuvo.com.navigationdrawerbothsides.Adapter.GroupsPagerAdapter;
+import softuvo.com.navigationdrawerbothsides.Adapter.BlogMainAdapter;
+import softuvo.com.navigationdrawerbothsides.Adapter.PollsMainAdapter;
 import softuvo.com.navigationdrawerbothsides.R;
 
-public class Menu_Group_Fragment extends Fragment {
-    private GroupsPagerAdapter mSectionsPagerAdapter;
+public class PollsMainFragment extends Fragment {
+    private PollsMainAdapter mSectionsPagerAdapter;
     private ViewPager mViewPager;
-
-    public Menu_Group_Fragment() {
-    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-        setHasOptionsMenu(true);
         super.onCreate(savedInstanceState);
-    }
 
-    @Override
-    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        menu.clear();
-        inflater.inflate(R.menu.main, menu);
-        /*super.onCreateOptionsMenu(menu, inflater);*/
-
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-        if (id == R.id.action_add) {
-            startActivity(new Intent(getActivity(), AddGroupActivity.class));
-        }
-        return super.onOptionsItemSelected(item);
     }
 
     @RequiresApi(api = Build.VERSION_CODES.ICE_CREAM_SANDWICH)
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View getView = inflater.inflate(R.layout.fragment_menu_group, container, false);
-        ((MainActivity)getActivity()).setTitle("Groups");
-        setHasOptionsMenu(true);
-        mSectionsPagerAdapter = new GroupsPagerAdapter(getChildFragmentManager());
+        View getView = inflater.inflate(R.layout.fragment_main_polls, container, false);
+        ((MainActivity) getActivity()).setTitle("Polls");
+        mSectionsPagerAdapter = new PollsMainAdapter(getChildFragmentManager());
 
         mViewPager = getView.findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
@@ -81,7 +56,6 @@ public class Menu_Group_Fragment extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-
     }
 
     @Override

@@ -8,6 +8,9 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
@@ -19,23 +22,27 @@ import softuvo.com.navigationdrawerbothsides.R;
 import softuvo.com.navigationdrawerbothsides.fragments.ForumsFragment;
 import softuvo.com.navigationdrawerbothsides.fragments.Menu_Group_Fragment;
 import softuvo.com.navigationdrawerbothsides.fragments.PagesMainFragment;
+import softuvo.com.navigationdrawerbothsides.fragments.PollsMainFragment;
 import softuvo.com.navigationdrawerbothsides.fragments.QuizzesFragment;
 
-public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private DrawerLayout drawer;
-    TextView tv_title;
+    private TextView tv_title;
+    ImageView menuRight;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         drawer = findViewById(R.id.drawer_layout);
         tv_title = findViewById(R.id.tv_title);
 
         ImageView menuLeft = findViewById(R.id.menuLeft);
-        ImageView menuRight = findViewById(R.id.menuRight);
+        menuRight = findViewById(R.id.menuRight);
 
         menuLeft.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -101,9 +108,13 @@ public class MainActivity extends AppCompatActivity
             case R.id.item_blog:
                 fragment = new BlogMainFragment();
                 break;
+            case R.id.item_polls:
+                fragment = new PollsMainFragment();
+                break;
 
         }
         if (fragment != null) {
+            menuRight.setVisibility(View.GONE);
             transaction.replace(R.id.fragment_layout, fragment);
             transaction.addToBackStack(null);
             transaction.commit();
