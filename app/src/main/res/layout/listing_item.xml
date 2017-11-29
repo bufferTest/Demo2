@@ -6,6 +6,7 @@
     android:layout_marginBottom="10dp">
 
     <android.support.constraint.ConstraintLayout
+        android:id="@+id/lay_listing_item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/grey_back">

@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="softuvo.com.navigationdrawerbothsides.Activity.ListingInformationActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/lay_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_dark">
+
+        <ImageView
+            android:id="@+id/menuLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:src="@drawable/ic_back"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MarketPlace"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@+id/lay_my_comment"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lay_app_bar">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/listing_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Decoupage Ladies bag"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="@+id/vertical02"
+                app:layout_constraintRight_toRightOf="@+id/vertical98" />
+
+            <TextView
+                android:id="@+id/tv_listing_by"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="by Setia Bhakti"
+                app:layout_constraintLeft_toLeftOf="@+id/vertical02"
+                app:layout_constraintRight_toLeftOf="@+id/tv_time_count"
+                app:layout_constraintTop_toBottomOf="@+id/listing_title" />
+
+            <TextView
+                android:id="@+id/tv_time_count"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:text="3 Months ago"
+                app:layout_constraintLeft_toRightOf="@+id/tv_listing_by"
+                app:layout_constraintRight_toRightOf="@+id/vertical98"
+                app:layout_constraintTop_toBottomOf="@+id/listing_title" />
+
+            <ImageView
+                android:id="@+id/iv_large_image"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/photo1"
+                app:layout_constraintLeft_toLeftOf="@+id/vertical02"
+                app:layout_constraintRight_toRightOf="@+id/vertical98"
+                app:layout_constraintTop_toBottomOf="@+id/tv_time_count" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/iv_listing"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintLeft_toLeftOf="@+id/vertical02"
+                app:layout_constraintRight_toRightOf="@+id/vertical98"
+                app:layout_constraintTop_toBottomOf="@+id/iv_large_image" />
+
+            <TextView
+                android:id="@+id/tv_contact_seller"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_background_blue"
+                android:gravity="center"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:text="Contact Seller"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="@+id/vertical02"
+                app:layout_constraintRight_toRightOf="@+id/vertical98"
+                app:layout_constraintTop_toBottomOf="@+id/iv_listing" />
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:text="Price"
+                app:layout_constraintLeft_toLeftOf="@+id/vertical02"
+                app:layout_constraintRight_toRightOf="@+id/vertical20"
+                app:layout_constraintTop_toBottomOf="@+id/tv_contact_seller" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="$50"
+                android:textColor="@android:color/holo_orange_light"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_price"
+                app:layout_constraintLeft_toLeftOf="@+id/vertical20"
+                app:layout_constraintRight_toRightOf="@+id/vertical98"
+                app:layout_constraintTop_toTopOf="@+id/tv_price" />
+
+            <View
+                android:id="@+id/vw_price_below"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/divider_color"
+                app:layout_constraintLeft_toLeftOf="@+id/vertical02"
+                app:layout_constraintRight_toRightOf="@+id/vertical98"
+                app:layout_constraintTop_toBottomOf="@+id/tv_price" />
+
+
+            <TextView
+                android:id="@+id/tv_category"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:text="Category"
+                app:layout_constraintLeft_toLeftOf="@+id/vertical02"
+                app:layout_constraintRight_toRightOf="@+id/vertical20"
+                app:layout_constraintTop_toBottomOf="@+id/vw_price_below" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Stuff"
+                android:textColor="@android:color/holo_orange_light"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_category"
+                app:layout_constraintLeft_toLeftOf="@+id/vertical20"
+                app:layout_constraintRight_toRightOf="@+id/vertical98"
+                app:layout_constraintTop_toTopOf="@+id/tv_category" />
+
+            <View
+                android:id="@+id/vw_category_below"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/divider_color"
+                app:layout_constraintLeft_toLeftOf="@+id/vertical02"
+                app:layout_constraintRight_toRightOf="@+id/vertical98"
+                app:layout_constraintTop_toBottomOf="@+id/tv_category" />
+
+            <TextView
+                android:id="@+id/tv_location"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:text="Location"
+                app:layout_constraintLeft_toLeftOf="@+id/vertical02"
+                app:layout_constraintRight_toRightOf="@+id/vertical20"
+                app:layout_constraintTop_toBottomOf="@+id/vw_category_below" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Indonesia"
+                android:textColor="@android:color/holo_orange_light"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_location"
+                app:layout_constraintLeft_toLeftOf="@+id/vertical20"
+                app:layout_constraintRight_toRightOf="@+id/vertical98"
+                app:layout_constraintTop_toTopOf="@+id/tv_location" />
+
+            <View
+                android:id="@+id/vw_location_below"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/divider_color"
+                app:layout_constraintLeft_toLeftOf="@+id/vertical02"
+                app:layout_constraintRight_toRightOf="@+id/vertical98"
+                app:layout_constraintTop_toBottomOf="@+id/tv_location" />
+
+            <TextView
+                android:id="@+id/tv_city"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:text="City"
+                app:layout_constraintLeft_toLeftOf="@+id/listing_title"
+                app:layout_constraintRight_toRightOf="@+id/tv_category"
+                app:layout_constraintTop_toBottomOf="@+id/vw_location_below" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Jakarta"
+                android:textColor="@android:color/holo_orange_light"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_city"
+                app:layout_constraintLeft_toLeftOf="@+id/vertical20"
+                app:layout_constraintRight_toRightOf="@+id/vertical98"
+                app:layout_constraintTop_toTopOf="@+id/tv_city" />
+
+            <View
+                android:id="@+id/vw_city_below"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/divider_color"
+                app:layout_constraintLeft_toLeftOf="@+id/listing_title"
+                app:layout_constraintRight_toRightOf="@+id/vertical98"
+                app:layout_constraintTop_toBottomOf="@+id/tv_city" />
+
+            <TextView
+                android:id="@+id/tv_zip"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:text="Zip"
+                app:layout_constraintLeft_toLeftOf="@+id/vertical02"
+                app:layout_constraintRight_toRightOf="@+id/tv_category"
+                app:layout_constraintTop_toBottomOf="@+id/vw_city_below" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="12510"
+                android:textColor="@android:color/holo_orange_light"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_zip"
+                app:layout_constraintLeft_toLeftOf="@+id/vertical20"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_zip" />
+
+            <View
+                android:id="@+id/vw_zip_below"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/divider_color"
+                app:layout_constraintLeft_toLeftOf="@+id/listing_title"
+                app:layout_constraintRight_toRightOf="@+id/vertical98"
+                app:layout_constraintTop_toBottomOf="@+id/tv_zip" />
+
+            <TextView
+                android:id="@+id/tv_desc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:text="Made from original pandan leaves in combination with Vinyl and decorated in a typical"
+                app:layout_constraintLeft_toLeftOf="@+id/vertical02"
+                app:layout_constraintRight_toRightOf="@+id/vertical98"
+                app:layout_constraintTop_toBottomOf="@+id/vw_zip_below" />
+
+            <View
+                android:id="@+id/vw_desc_below"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/divider_color"
+                app:layout_constraintLeft_toLeftOf="@+id/listing_title"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_desc" />
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/lay_like_share"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/vw_desc_below">
+
+                <ImageView
+                    android:id="@+id/iv_share"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/share_24dp" />
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/lay_comments"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/rounded_corner_rectangle"
+                    android:padding="5dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/lay_like"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/tv_comment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:text="2"
+                        app:layout_constraintLeft_toLeftOf="parent" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/like"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_comment"
+                        app:layout_constraintLeft_toRightOf="@+id/tv_comment"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/tv_comment" />
+
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/lay_like"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_corner_rectangle"
+                    android:padding="5dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/tv_like"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:text="2"
+                        app:layout_constraintLeft_toLeftOf="@+id/lay_like" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/like"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_like"
+                        app:layout_constraintLeft_toRightOf="@+id/tv_like"
+                        app:layout_constraintRight_toRightOf="@+id/lay_like"
+                        app:layout_constraintTop_toTopOf="@+id/tv_like" />
+
+                </android.support.constraint.ConstraintLayout>
+            </android.support.constraint.ConstraintLayout>
+
+            <View
+                android:id="@+id/vw_like_below"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/divider_color"
+                app:layout_constraintLeft_toLeftOf="@+id/listing_title"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lay_like_share" />
+            <TextView
+                android:layout_width="0dp"
+                android:padding="5dp"
+                android:layout_height="wrap_content"
+                android:text="You and 7 others liked that photo"
+                app:layout_constraintLeft_toLeftOf="@+id/vertical02"
+                app:layout_constraintRight_toRightOf="@+id/vertical98"
+                app:layout_constraintTop_toBottomOf="@+id/vw_like_below" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/vertical02"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.02" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/vertical98"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.98" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/vertical20"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.30" />
+
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/lay_my_comment"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/grey_back"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vw_differentiator">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/edit_text_background"
+            android:hint="Please enter your comment"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/bt_post"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/bt_post"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corner_rectangle"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:text="Post"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>
