@@ -1,6 +1,7 @@
 package softuvo.com.navigationdrawerbothsides.fragments;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Build;
 import android.os.Bundle;
@@ -9,10 +10,15 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
+import softuvo.com.navigationdrawerbothsides.Activity.AddGroupActivity;
+import softuvo.com.navigationdrawerbothsides.Activity.AddPagesActivity;
 import softuvo.com.navigationdrawerbothsides.Activity.MainActivity;
 import softuvo.com.navigationdrawerbothsides.Adapter.ForumsAdapter;
 import softuvo.com.navigationdrawerbothsides.R;
@@ -26,6 +32,7 @@ public class ForumsFragment extends Fragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+        setHasOptionsMenu(true);
         super.onCreate(savedInstanceState);
 
     }
@@ -36,6 +43,7 @@ public class ForumsFragment extends Fragment {
                              Bundle savedInstanceState) {
         View getView = inflater.inflate(R.layout.fragment_forum, container, false);
         ((MainActivity)getActivity()).setTitle("Forums");
+        setHasOptionsMenu(true);
         mSectionsPagerAdapter = new ForumsAdapter(getChildFragmentManager());
 
         mViewPager = getView.findViewById(R.id.container);
@@ -54,6 +62,7 @@ public class ForumsFragment extends Fragment {
         }
         return getView;
     }
+
 
     @Override
     public void onAttach(Context context) {

@@ -1,6 +1,7 @@
 package softuvo.com.navigationdrawerbothsides.fragments;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Build;
 import android.os.Bundle;
@@ -9,10 +10,15 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
+import softuvo.com.navigationdrawerbothsides.Activity.AddGroupActivity;
+import softuvo.com.navigationdrawerbothsides.Activity.AddNewListing;
 import softuvo.com.navigationdrawerbothsides.Activity.MainActivity;
 import softuvo.com.navigationdrawerbothsides.Adapter.PagesMarketplaceAdapter;
 import softuvo.com.navigationdrawerbothsides.R;
@@ -24,7 +30,7 @@ public class MarketPlaceFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        setHasOptionsMenu(true);
     }
 
     @RequiresApi(api = Build.VERSION_CODES.ICE_CREAM_SANDWICH)
@@ -33,6 +39,7 @@ public class MarketPlaceFragment extends Fragment {
                              Bundle savedInstanceState) {
         View getView = inflater.inflate(R.layout.fragment_marketplace, container, false);
         ((MainActivity)getActivity()).setTitle("MarketPlace");
+        setHasOptionsMenu(true);
         mSectionsPagerAdapter = new PagesMarketplaceAdapter(getChildFragmentManager());
 
         mViewPager = getView.findViewById(R.id.container);
@@ -50,6 +57,23 @@ public class MarketPlaceFragment extends Fragment {
             ((LinearLayout) root).setDividerDrawable(drawable);
         }
         return getView;
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        menu.clear();
+        inflater.inflate(R.menu.main, menu);
+        /*super.onCreateOptionsMenu(menu, inflater);*/
+
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.action_add) {
+            startActivity(new Intent(getActivity(), AddNewListing.class));
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     @Override
