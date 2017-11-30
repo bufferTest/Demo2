@@ -132,9 +132,9 @@
         android:padding="5dp"
         android:popupBackground="@android:color/white"
         android:spinnerMode="dropdown"
+        app:layout_constraintLeft_toLeftOf="@+id/filter_Menu"
         app:layout_constraintLeft_toRightOf="@+id/tv_category"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="@+id/filter_Menu"
         app:layout_constraintTop_toBottomOf="@+id/filter_Menu" />
 
     <View
@@ -145,4 +145,5 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/category_Menu" />
+
 </android.support.constraint.ConstraintLayout>

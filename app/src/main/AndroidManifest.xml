@@ -36,7 +36,8 @@
         <activity android:name=".Activity.AddPagesActivity" />
         <activity android:name=".Activity.AddNewListing" />
         <activity android:name=".Activity.ListingDetailActivity" />
-        <activity android:name=".Activity.ListingInformationActivity"></activity>
+        <activity android:name=".Activity.ListingInformationActivity" />
+        <activity android:name=".Activity.AddQuizActivity"></activity>
     </application>
 
 </manifest>
