@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Demo.iml" filepath="$PROJECT_DIR$/Demo.iml" />
       <module fileurl="file://D:\Demo\Demo.iml" filepath="D:\Demo\Demo.iml" />
       <module fileurl="file://D:\learning\NavigationDrawerBothSides\Demo.iml" filepath="D:\learning\NavigationDrawerBothSides\Demo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/NavigationDrawerBothSides.iml" filepath="$PROJECT_DIR$/NavigationDrawerBothSides.iml" />
       <module fileurl="file://D:\android projects\Demo\NavigationDrawerBothSides.iml" filepath="D:\android projects\Demo\NavigationDrawerBothSides.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://D:\Demo\app\app.iml" filepath="D:\Demo\app\app.iml" />

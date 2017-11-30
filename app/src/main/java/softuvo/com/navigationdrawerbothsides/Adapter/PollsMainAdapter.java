@@ -9,10 +9,6 @@ import softuvo.com.navigationdrawerbothsides.fragments.AllPollsFragment;
 import softuvo.com.navigationdrawerbothsides.fragments.MyBlogFragment;
 import softuvo.com.navigationdrawerbothsides.fragments.MyPollsFragment;
 
-/**
- * Created by lovkesh handa on 26-11-2017.
- */
-
 public class PollsMainAdapter extends FragmentPagerAdapter {
 
     public PollsMainAdapter(FragmentManager fm) {
