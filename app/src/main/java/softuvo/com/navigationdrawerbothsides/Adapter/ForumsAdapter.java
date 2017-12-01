@@ -5,6 +5,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 import softuvo.com.navigationdrawerbothsides.fragments.MyGroup_fragment;
+import softuvo.com.navigationdrawerbothsides.fragments.MyThread;
 import softuvo.com.navigationdrawerbothsides.fragments.ShowForumsFragment;
 
 public class ForumsAdapter extends FragmentPagerAdapter {
@@ -21,7 +22,7 @@ public class ForumsAdapter extends FragmentPagerAdapter {
         } else if (position == 1) {
             fragment = new MyGroup_fragment();
         } else if (position == 2) {
-            fragment = new MyGroup_fragment();
+            fragment = new MyThread();
         } else if (position == 3) {
             fragment = new MyGroup_fragment();
         }
