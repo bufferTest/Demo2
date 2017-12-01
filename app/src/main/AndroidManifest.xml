@@ -37,7 +37,8 @@
         <activity android:name=".Activity.AddNewListing" />
         <activity android:name=".Activity.ListingDetailActivity" />
         <activity android:name=".Activity.ListingInformationActivity" />
-        <activity android:name=".Activity.AddQuizActivity"></activity>
+        <activity android:name=".Activity.AddQuizActivity" />
+        <activity android:name=".Activity.AddPollActivity"></activity>
     </application>
 
 </manifest>
