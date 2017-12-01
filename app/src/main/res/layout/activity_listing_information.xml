@@ -428,6 +428,7 @@
             android:layout_marginRight="10dp"
             android:background="@drawable/edit_text_background"
             android:hint="Please enter your comment"
+            android:maxLines="3"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             app:layout_constraintBottom_toBottomOf="parent"

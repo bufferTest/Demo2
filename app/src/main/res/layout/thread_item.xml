@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lay_group"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_group_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="13dp"
+        android:background="@drawable/newspaper"
+        android:scaleType="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_thread_title"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_messages"/>
+
+    <TextView
+        android:id="@+id/tv_thread_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="The Red cross Society donation for hurricane"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toRightOf="@+id/iv_group_icon"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_members"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="Last Post by Perez Ivan"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toRightOf="@+id/iv_group_icon"
+        app:layout_constraintTop_toBottomOf="@id/tv_thread_title" />
+
+    <View
+        android:id="@+id/vw_bottom"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:background="@color/divider_color"
+        app:layout_constraintTop_toBottomOf="@+id/tv_messages" />
+
+    <TextView
+        android:id="@+id/tv_messages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableRight="@drawable/ic_message"
+        android:padding="5dp"
+        android:text="2"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_members"
+        app:layout_constraintTop_toBottomOf="@+id/tv_members" />
+
+    <TextView
+        android:id="@+id/tv_seen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableRight="@drawable/ic_message"
+        android:padding="5dp"
+        android:text="5"
+        app:layout_constraintLeft_toRightOf="@+id/tv_messages"
+        app:layout_constraintTop_toBottomOf="@+id/tv_members" />
+
+    <TextView
+        android:id="@+id/tv_time_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="3 Months"
+        app:layout_constraintLeft_toRightOf="@+id/tv_seen"
+        app:layout_constraintTop_toBottomOf="@+id/tv_members" />
+</android.support.constraint.ConstraintLayout>

@@ -29,24 +29,13 @@ public class MyThreadAdapter extends RecyclerView.Adapter<MyThreadAdapter.MyView
 
     @Override
     public MyThreadAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View listItem = LayoutInflater.from(parent.getContext()).inflate(R.layout.group_item, parent, false);
+        View listItem = LayoutInflater.from(parent.getContext()).inflate(R.layout.thread_item, parent, false);
         return new MyThreadAdapter.MyViewHolder(listItem);
     }
 
     @Override
     public void onBindViewHolder(MyThreadAdapter.MyViewHolder holder, final int position) {
-        holder.tvGroupTitle.setText(drawerItemList.get(position).getTitle());
-        holder.TVListSubTitle.setText(drawerItemList.get(position).getSubTitle());
-        holder.tvComments.setText(drawerItemList.get(position).getComments());
-        Glide.with(context).load(drawerItemList.get(position).getImage()).into(holder.drawer_icon);
-        holder.layGroup.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(context, GroupInformationActivity.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                context.startActivity(intent);
-            }
-        });
+
     }
 
     @Override
@@ -55,20 +44,10 @@ public class MyThreadAdapter extends RecyclerView.Adapter<MyThreadAdapter.MyView
     }
 
     class MyViewHolder extends RecyclerView.ViewHolder {
-        TextView tvGroupTitle;
-        TextView TVListSubTitle;
-        TextView tvComments;
-        ImageView drawer_icon;
-        ConstraintLayout layGroup;
 
 
         MyViewHolder(View itemView) {
             super(itemView);
-            tvGroupTitle = itemView.findViewById(R.id.tv_group_title);
-            TVListSubTitle = itemView.findViewById(R.id.tv_members);
-            tvComments = itemView.findViewById(R.id.tv_comments);
-            drawer_icon = itemView.findViewById(R.id.iv_group_icon);
-            layGroup = itemView.findViewById(R.id.lay_group);
         }
     }
 }
