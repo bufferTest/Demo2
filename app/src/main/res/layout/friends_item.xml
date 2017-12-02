@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lay_quize"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <softuvo.com.navigationdrawerbothsides.Views.RoundedImageView
+        android:id="@+id/iv_profile_icon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="19dp"
+        android:scaleType="center"
+        android:src="@drawable/ic_group"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_duration"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@+id/vertical18"
+        app:layout_constraintTop_toTopOf="@+id/tv_members"
+        app:riv_border_width="1dp"
+        app:riv_corner_radius="4dp"
+        app:riv_oval="false" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/vertical18"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.20" />
+
+    <TextView
+        android:id="@+id/tv_members"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="4dp"
+        android:paddingLeft="4dp"
+        android:text="Lovkesh Handa"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@+id/vertical18"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_duration"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="top"
+        android:paddingBottom="5dp"
+        android:paddingLeft="4dp"
+        android:paddingTop="4dp"
+        android:text="2 months"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="@+id/vertical18"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_members" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/divider_color"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_duration" />
+</android.support.constraint.ConstraintLayout>

@@ -4,15 +4,18 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
+import softuvo.com.navigationdrawerbothsides.fragments.AboutMeFragment;
 import softuvo.com.navigationdrawerbothsides.fragments.GroupActivityFragment;
 import softuvo.com.navigationdrawerbothsides.fragments.GroupEventsFragment;
 import softuvo.com.navigationdrawerbothsides.fragments.GroupInformationFragment;
 import softuvo.com.navigationdrawerbothsides.fragments.GroupPhotosFragment;
+import softuvo.com.navigationdrawerbothsides.fragments.PersonActivityFragment;
+import softuvo.com.navigationdrawerbothsides.fragments.PersonFriendsFragment;
 import softuvo.com.navigationdrawerbothsides.fragments.QuizzesActivityFragment;
 
-public class QuizzesInformationAdapter extends FragmentPagerAdapter {
+public class ProfileInformationAdapter extends FragmentPagerAdapter {
 
-    public QuizzesInformationAdapter(FragmentManager fm) {
+    public ProfileInformationAdapter(FragmentManager fm) {
         super(fm);
     }
 
@@ -20,11 +23,11 @@ public class QuizzesInformationAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         Fragment fragment = null;
         if (position == 0) {
-            fragment = new QuizzesActivityFragment();
+            fragment = new PersonActivityFragment();
         } else if (position == 1) {
-            fragment = new GroupActivityFragment();
+            fragment = new AboutMeFragment();
         } else if (position == 2) {
-            fragment = new GroupEventsFragment();
+            fragment = new PersonFriendsFragment();
         } else if (position == 3) {
             fragment = new GroupPhotosFragment();
         } else if (position == 4) {

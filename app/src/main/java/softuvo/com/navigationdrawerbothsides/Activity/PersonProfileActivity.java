@@ -9,12 +9,11 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-import softuvo.com.navigationdrawerbothsides.Adapter.GroupInformationAdapter;
-import softuvo.com.navigationdrawerbothsides.Adapter.QuizzesInformationAdapter;
+import softuvo.com.navigationdrawerbothsides.Adapter.ProfileInformationAdapter;
 import softuvo.com.navigationdrawerbothsides.R;
 
 public class PersonProfileActivity extends AppCompatActivity {
-    private QuizzesInformationAdapter mSectionsPagerAdapter;
+    private ProfileInformationAdapter mSectionsPagerAdapter;
     private ViewPager mViewPager;
 
     @Override
@@ -22,7 +21,7 @@ public class PersonProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quizzes_information);
 
-        mSectionsPagerAdapter = new QuizzesInformationAdapter(getSupportFragmentManager());
+        mSectionsPagerAdapter = new ProfileInformationAdapter(getSupportFragmentManager());
 
         mViewPager = findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);

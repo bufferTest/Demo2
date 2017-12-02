@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:src="@drawable/ic_pencil"
+        app:layout_constraintBottom_toTopOf="@+id/rv_events"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/vw_edit"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/vw_edit"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="4dp"
+        android:background="#D9DCDC"
+        app:layout_constraintBottom_toBottomOf="@id/iv_edit"
+        app:layout_constraintRight_toRightOf="@id/vertical33"
+        app:layout_constraintTop_toTopOf="@id/iv_edit" />
+
+    <ImageView
+        android:id="@+id/iv_camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:src="@drawable/ic_camera"
+        app:layout_constraintBottom_toTopOf="@+id/rv_events"
+        app:layout_constraintLeft_toRightOf="@+id/vw_edit"
+        app:layout_constraintRight_toRightOf="@id/vw_location"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/vw_location"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="4dp"
+        android:background="#D9DCDC"
+        app:layout_constraintBottom_toBottomOf="@id/iv_edit"
+        app:layout_constraintRight_toRightOf="@id/vertical66"
+        app:layout_constraintTop_toTopOf="@id/iv_edit" />
+
+
+    <ImageView
+        android:id="@+id/iv_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:src="@drawable/ic_location"
+        app:layout_constraintBottom_toTopOf="@+id/rv_events"
+        app:layout_constraintLeft_toRightOf="@+id/vw_location"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_edit">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/lay_cover"
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toTopOf="@id/guideline"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <softuvo.com.navigationdrawerbothsides.Views.RoundedImageView
+                android:id="@+id/iv_profile"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="15dp"
+                android:scaleType="center"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_privacy"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:riv_border_width="3dp"
+                app:riv_corner_radius="8dp"
+                app:riv_oval="false" />
+
+            <TextView
+                android:id="@+id/tv_group_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:padding="3dp"
+                android:text="World Cup"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toRightOf="@+id/iv_profile"
+                app:layout_constraintTop_toBottomOf="@+id/lay_cover" />
+
+            <TextView
+                android:id="@+id/tv_privacy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:padding="2dp"
+                android:paddingBottom="20dp"
+                android:text="Public Group"
+                app:layout_constraintLeft_toRightOf="@+id/iv_profile"
+                app:layout_constraintTop_toBottomOf="@+id/tv_group_name" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_members"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="36dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_profile" />
+
+
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/vertical33"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.33" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/vertical66"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.66" />
+</android.support.constraint.ConstraintLayout>
