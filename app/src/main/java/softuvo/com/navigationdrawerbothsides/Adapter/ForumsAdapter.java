@@ -20,11 +20,11 @@ public class ForumsAdapter extends FragmentPagerAdapter {
         if (position == 0) {
             fragment = new ShowForumsFragment();
         } else if (position == 1) {
-            fragment = new MyGroup_fragment();
+            fragment = new MyThread();
         } else if (position == 2) {
             fragment = new MyThread();
         } else if (position == 3) {
-            fragment = new MyGroup_fragment();
+            fragment = new MyThread();
         }
         return fragment;
     }

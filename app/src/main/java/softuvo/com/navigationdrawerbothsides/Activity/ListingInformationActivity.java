@@ -1,9 +1,13 @@
 package softuvo.com.navigationdrawerbothsides.Activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -29,5 +33,21 @@ public class ListingInformationActivity extends AppCompatActivity {
         LinearLayoutManager llm = new LinearLayoutManager(getApplicationContext());
         llm.setOrientation(LinearLayoutManager.HORIZONTAL);
         iv_listing.setLayoutManager(llm);
+
+        TextView tv_contact_seller = findViewById(R.id.tv_contact_seller);
+        tv_contact_seller.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(),ContactSellerActivity.class));
+            }
+        });
+
+        ImageView menuLeft = findViewById(R.id.menuLeft);
+        menuLeft.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
     }
 }
