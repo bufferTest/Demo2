@@ -15,6 +15,7 @@ import softuvo.com.navigationdrawerbothsides.R;
 
 public class AddGroupActivity extends AppCompatActivity {
     Spinner category_Menu;
+    /* git remote set-url origin "https://github.com/bufferTest/Demo2.git" */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,18 +33,5 @@ public class AddGroupActivity extends AppCompatActivity {
         ArrayList<String> category = new ArrayList<>(Arrays.asList(getResources().getStringArray(R.array.category)));
         CategorySpinnerAdapter categorySpinnerAdapter = new CategorySpinnerAdapter(getApplicationContext(), category);
         category_Menu.setAdapter(categorySpinnerAdapter);
-        /*category_Menu.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-
-                category_Menu = parent.getItemAtPosition(position).toString();
-                setConditions();
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });*/
     }
 }

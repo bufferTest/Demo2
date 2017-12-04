@@ -16,6 +16,7 @@ import com.bumptech.glide.Glide;
 import java.util.ArrayList;
 
 import softuvo.com.navigationdrawerbothsides.Activity.CheckInActivity;
+import softuvo.com.navigationdrawerbothsides.Activity.UpdateStatusActivity;
 import softuvo.com.navigationdrawerbothsides.Adapter.ShowMembersAdapter;
 import softuvo.com.navigationdrawerbothsides.R;
 
@@ -56,6 +57,13 @@ public class PersonActivityFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getActivity(), CheckInActivity.class));
+            }
+        });
+        ImageView iv_edit = getView.findViewById(R.id.iv_edit);
+        iv_edit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(), UpdateStatusActivity.class));
             }
         });
 

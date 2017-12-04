@@ -5,6 +5,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 import softuvo.com.navigationdrawerbothsides.fragments.AboutMeFragment;
+import softuvo.com.navigationdrawerbothsides.fragments.ActivityPointsFragment;
 import softuvo.com.navigationdrawerbothsides.fragments.GroupActivityFragment;
 import softuvo.com.navigationdrawerbothsides.fragments.GroupEventsFragment;
 import softuvo.com.navigationdrawerbothsides.fragments.GroupInformationFragment;
@@ -31,7 +32,7 @@ public class ProfileInformationAdapter extends FragmentPagerAdapter {
         } else if (position == 3) {
             fragment = new GroupPhotosFragment();
         } else if (position == 4) {
-            fragment = new GroupPhotosFragment();
+            fragment = new ActivityPointsFragment();
         }
         return fragment;
     }
