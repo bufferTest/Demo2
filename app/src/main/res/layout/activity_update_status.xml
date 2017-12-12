@@ -66,42 +66,48 @@
     <android.support.constraint.ConstraintLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:padding="10dp"
         app:layout_constraintRight_toRightOf="parent">
 
         <ImageView
             android:id="@+id/iv_camera"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:background="@drawable/ic_camera"
+            android:src="@drawable/ic_camera"
             app:layout_constraintHorizontal_chainStyle="spread"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toLeftOf="@+id/iv_gallery" />
 
         <ImageView
             android:id="@+id/iv_gallery"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:background="@drawable/ic_group"
+            android:src="@drawable/ic_group"
+            app:layout_constraintTop_toTopOf="@+id/iv_camera"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_camera"
             app:layout_constraintLeft_toRightOf="@+id/iv_camera"
-            app:layout_constraintRight_toLeftOf="@+id/iv_location"/>
+            app:layout_constraintRight_toLeftOf="@+id/iv_location" />
 
         <ImageView
             android:id="@+id/iv_location"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:src="@drawable/ic_location"
+            app:layout_constraintTop_toTopOf="@+id/iv_camera"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_camera"
             app:layout_constraintLeft_toRightOf="@+id/iv_gallery"
-            android:background="@drawable/ic_location"
-            app:layout_constraintRight_toLeftOf="@+id/iv_link"/>
+            app:layout_constraintRight_toLeftOf="@+id/iv_link" />
 
         <ImageView
             android:id="@+id/iv_link"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:layout_constraintRight_toRightOf="parent"
+            android:src="@drawable/ic_male"
+            app:layout_constraintTop_toTopOf="@+id/iv_camera"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_camera"
             app:layout_constraintLeft_toRightOf="@+id/iv_location"
-            android:background="@drawable/ic_male" />
+            app:layout_constraintRight_toRightOf="parent" />
     </android.support.constraint.ConstraintLayout>
 </android.support.constraint.ConstraintLayout>
